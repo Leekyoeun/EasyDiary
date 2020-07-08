@@ -19,7 +19,7 @@ android {
         config {
             keyAlias 'android'
             keyPassword properties.getProperty("storePassword")
-            storeFile file(properties.getProperty("storeFile"))
+            storeFile file('storeFile')
             storePassword properties.getProperty("storePassword")
         }
     }
@@ -87,7 +87,7 @@ android {
         }
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.debug
         }
     }
     androidExtensions {

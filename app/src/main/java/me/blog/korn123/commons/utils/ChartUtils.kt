@@ -17,8 +17,7 @@ class ChartUtils {
                     }
                 }
             }
-            
-            
+
             return when(isReverse) {
                 true -> map.toList().sortedByDescending { (_, value) -> value }.toMap()
                 false -> map.toList().sortedBy { (_, value) -> value }.toMap()

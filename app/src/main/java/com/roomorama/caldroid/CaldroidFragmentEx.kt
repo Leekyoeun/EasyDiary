@@ -38,38 +38,6 @@ import java.util.TimeZone
 
 import hirondelle.date4j.DateTime
 
-/**
- * Caldroid is a fragment that display calendar with dates in a month. Caldroid
- * can be used as embedded fragment, or as dialog fragment. <br></br>
- * <br></br>
- * Caldroid fragment includes 4 main parts:<br></br>
- * <br></br>
- * 1) Month title view: show the month and year (e.g MARCH, 2013) <br></br>
- * <br></br>
- * 2) Navigation arrows: to navigate to next month or previous month <br></br>
- * <br></br>
- * 3) Weekday gridview: contains only 1 row and 7 columns. To display
- * "SUN, MON, TUE, WED, THU, FRI, SAT" <br></br>
- * <br></br>
- * 4) An infinite view pager that allow user to swipe left/right to change
- * month. This library is taken from
- * https://github.com/antonyt/InfiniteViewPager <br></br>
- * <br></br>
- * This infinite view pager recycles 4 fragment, each fragment contains a grid
- * view with 7 columns to display the dates in month. Whenever user swipes
- * different screen, the date grid views are updated. <br></br>
- * <br></br>
- * Caldroid fragment supports setting min/max date, selecting dates in a range,
- * setting disabled dates, highlighting today. It includes convenient methods to
- * work with date and string, enable or disable the navigation arrows. User can
- * also swipe left/right to change months.<br></br>
- * <br></br>
- * Caldroid code is simple and clean partly because of powerful Date4J DateTime
- * library!
- *
- * @author thomasdao
- */
-
 @SuppressLint("DefaultLocale")
 abstract class CaldroidFragmentEx : DialogFragment() {
 
