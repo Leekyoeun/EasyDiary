@@ -92,7 +92,6 @@ class PostCardViewerActivity : EasyDiaryActivity() {
             }
         }
     }
-
     private fun initPostCard() {
         val listPostcard = File(EasyDiaryUtils.getApplicationDataDirectory(this) + DIARY_POSTCARD_DIRECTORY)
                 .listFiles()
@@ -109,7 +108,6 @@ class PostCardViewerActivity : EasyDiaryActivity() {
             app_bar.setExpanded(false)
         }
     }
-    
     internal class SpacesItemDecoration(private val space: Int) : androidx.recyclerview.widget.RecyclerView.ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: androidx.recyclerview.widget.RecyclerView, state: androidx.recyclerview.widget.RecyclerView.State) {
             val position = parent.getChildAdapterPosition(view)
@@ -119,13 +117,11 @@ class PostCardViewerActivity : EasyDiaryActivity() {
                 }
                 else -> outRect.right = 0
             }
-            
             when (position < 2) {
                 true -> outRect.top = 0 
                 false -> outRect.top = space 
             }
         }
     }
-    
     data class PostCard(val file: File, var isItemChecked: Boolean)
 }
