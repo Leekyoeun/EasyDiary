@@ -1320,10 +1320,6 @@ abstract class CaldroidFragmentEx : DialogFragment() {
                 currentAdapter.notifyDataSetChanged()
 
                 // Refresh previous adapter
-                prevAdapter.setAdapterDateTime(currentDateTime!!.minus(0, 1, 0,
-                        0, 0, 0, 0, DateTime.DayOverflow.LastDay))
-                prevAdapter.notifyDataSetChanged()
-
                 // Refresh next adapter
                 nextAdapter.setAdapterDateTime(currentDateTime!!.plus(0, 1, 0, 0,
                         0, 0, 0, DateTime.DayOverflow.LastDay))
@@ -1448,6 +1444,7 @@ abstract class CaldroidFragmentEx : DialogFragment() {
          * @param year
          * @return
          */
+
         fun newInstance(dialogTitle: String, month: Int,
                         year: Int): CaldroidFragment {
             val f = CaldroidFragment()

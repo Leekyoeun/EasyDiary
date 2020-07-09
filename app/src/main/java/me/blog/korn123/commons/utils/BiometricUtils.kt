@@ -9,7 +9,6 @@ import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 
 class BiometricUtils {
     companion object {
-
         /*
          * Condition I: Check if the android version in device is greater than
          * Marshmallow, since fingerprint authentication is only supported
@@ -22,11 +21,9 @@ class BiometricUtils {
             return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
         }
 
-
         fun isBiometricPromptEnabled(): Boolean {
             return Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
         }
-
 
         /*
          * Condition II: Check if the device has fingerprint sensors.
@@ -40,7 +37,6 @@ class BiometricUtils {
             return fingerprintManager.isHardwareDetected
         }
 
-
         /*
          * Condition III: Fingerprint authentication can be matched with a
          * registered fingerprint of the user. So we need to perform this check
@@ -51,8 +47,6 @@ class BiometricUtils {
             val fingerprintManager = FingerprintManagerCompat.from(context)
             return fingerprintManager.hasEnrolledFingerprints()
         }
-
-
         /*
          * Condition IV: Check if the permission has been added to
          * the app. This permission will be granted as soon as the user
