@@ -19,7 +19,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
                     activity.setupDialogStuff(view, this, R.string.whats_new)
                 }
     }
-
     private fun getNewReleases(): String {
         val sb = StringBuilder()
 
@@ -33,7 +32,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             }
             sb.append("\n")
         }
-
         return sb.toString()
     }
 }
