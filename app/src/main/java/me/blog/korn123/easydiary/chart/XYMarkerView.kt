@@ -24,11 +24,13 @@ class XYMarkerView(context: Context, private val xAxisValueFormatter: IAxisValue
     override fun refreshContent(e: Entry?, highlight: Highlight?) {
         e?.let { entry ->
             tvContent.text = String.format("%s: %d", context.getString(R.string.write_count), entry.y.toInt())
-            super.refreshContent(entry, highlight)    
+            super.refreshContent(entry, highlight)
+            super.getChartView()
         }
     }
     
     override fun getOffset(): MPPointF {
         return MPPointF((-(width / 2)).toFloat(), (-height).toFloat())
+        
     }
 }

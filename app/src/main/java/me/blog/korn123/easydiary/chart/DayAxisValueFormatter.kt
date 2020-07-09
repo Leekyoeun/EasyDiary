@@ -6,6 +6,7 @@ import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.formatter.IAxisValueFormatter
 import me.blog.korn123.easydiary.R
 
+//시간별 차트 보여주기
 class DayAxisValueFormatter(private var context: Context?, private val chart: BarLineChartBase<*>) : IAxisValueFormatter {
 
     override fun getFormattedValue(value: Float, axis: AxisBase?): String = when (value.toInt()) {
