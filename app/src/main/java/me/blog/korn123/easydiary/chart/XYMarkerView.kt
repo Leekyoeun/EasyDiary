@@ -27,7 +27,7 @@ class XYMarkerView(context: Context, private val xAxisValueFormatter: IAxisValue
             super.refreshContent(entry, highlight)    
         }
     }
-
+    
     override fun getOffset(): MPPointF {
         return MPPointF((-(width / 2)).toFloat(), (-height).toFloat())
     }
